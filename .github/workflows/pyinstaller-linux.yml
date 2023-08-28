@@ -1,6 +1,6 @@
 # https://github.com/marketplace/actions/pyinstaller-linux
 
-name: Package exe with PyInstaller - Windows
+name: Package exe with PyInstaller - Linux
 
 on: [push, pull_request]
 
