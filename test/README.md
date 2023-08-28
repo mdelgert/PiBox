@@ -15,3 +15,7 @@ chown -R --reference=. ./dist/linux
 
 pyinstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
 chown -R --reference=. ./dist/windows
+
+# Tag release
+git tag -a v1.0.0 -m "Release 1.0.0"
+git push origin v1.0.0
