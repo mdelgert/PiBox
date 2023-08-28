@@ -27,12 +27,3 @@ pip3 freeze > requirements.txt
 pip install pyinstaller
 pyinstaller -F pibox.py
 
-# Enable spi
-sudo raspi-config
-interface options
-spi --> enable
-
-# Release
-sudo nano /etc/rc.local
-sudo python /home/mdelgert/source/PiBox/LCD/example4.py &
-
