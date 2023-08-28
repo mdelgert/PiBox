@@ -20,6 +20,7 @@ source env/bin/activate
 pip3 install adafruit-circuitpython-rgb-display
 pip3 install --upgrade --force-reinstall spidev
 sudo apt-get install fonts-dejavu python3-pil python3-numpy
+pip3 install Pillow 
 pip3 freeze > requirements.txt
 
 # Packager

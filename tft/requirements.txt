@@ -6,6 +6,7 @@ adafruit-circuitpython-typing==1.9.4
 Adafruit-PlatformDetect==3.49.0
 Adafruit-PureIO==1.1.11
 altgraph==0.17.3
+Pillow==10.0.0
 pyftdi==0.55.0
 pyinstaller==5.13.1
 pyinstaller-hooks-contrib==2023.7
