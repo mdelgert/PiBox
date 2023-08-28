@@ -28,7 +28,8 @@ interface options
 spi --> enable
 
 # Packager
-pip install -U pyinstaller
+# pip install -U pyinstaller
+pip install pyinstaller
 pyinstaller -F pibox.py
 
 # Release

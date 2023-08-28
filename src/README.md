@@ -5,7 +5,7 @@ python3 -m venv env
 source env/bin/activate
 pip install requests
 pip3 freeze > requirements.txt
-pip install -U pyinstaller
+pip install pyinstaller
 
 # Packager
-pyinstaller -F main.py
+pyinstaller -F test.py
