@@ -1,13 +1,8 @@
 # https://github.com/marketplace/actions/pyinstaller-linux
 
-name: Pyinstaller
-on: [push, pull_request]
+name: Package exe with PyInstaller - Windows
 
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -24,5 +19,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: pibox
-        path: LCD
+        name: test
+        path: src/dist/linux
