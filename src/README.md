@@ -9,3 +9,9 @@ pip install pyinstaller
 
 # Packager
 pyinstaller -F test.py
+
+/root/.pyenv/shims/pyinstaller --clean -y --dist ./dist/linux --workpath /tmp $SPEC_FILE
+chown -R --reference=. ./dist/linux
+
+pyinstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
+chown -R --reference=. ./dist/windows

@@ -15,6 +15,7 @@ jobs:
     - name: Package Application
       uses: JackMcKew/pyinstaller-action-linux@main
       with:
+        spec: test.spec
         path: src
 
     - uses: actions/upload-artifact@v2
