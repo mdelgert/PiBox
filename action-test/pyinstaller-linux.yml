@@ -1,0 +1,25 @@
+#https://github.com/marketplace/actions/pyinstaller-linux
+
+
+name: Package Application with Pyinstaller - Linux
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Package Application
+      uses: JackMcKew/pyinstaller-action-linux@main
+      with:
+        spec: test.spec
+        path: src
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: test
+        path: src/dist/linux
