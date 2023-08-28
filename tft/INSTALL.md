@@ -14,4 +14,4 @@ spi --> enable
 sudo nano /etc/rc.local
 
 # Run pibox on start
-pibox
+pibox &
