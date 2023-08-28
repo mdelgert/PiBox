@@ -33,10 +33,18 @@
 #include <stdarg.h>
 #include <bcm2835.h>
 
+// #define PWM_PIN   0  // default, uses both GPIO 13 and GPIO 18
+// #define HIGH_TEMP 80.
+// #define ON_TEMP   65.
+// #define OFF_TEMP  60.
+// #define MIN_FAN   150
+// #define KICK_FAN  200
+// #define MAX_FAN   480
+
 #define PWM_PIN   0  // default, uses both GPIO 13 and GPIO 18
-#define HIGH_TEMP 80.
-#define ON_TEMP   65.
-#define OFF_TEMP  60.
+#define HIGH_TEMP 75.
+#define ON_TEMP   41.
+#define OFF_TEMP  40.
 #define MIN_FAN   150
 #define KICK_FAN  200
 #define MAX_FAN   480
