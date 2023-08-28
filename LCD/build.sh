@@ -1,2 +1,2 @@
 pyinstaller -F pibox.py
-sudo cp dist/pibox /usr/bin
+sudo cp -f dist/pibox /usr/bin
