@@ -62,6 +62,7 @@ bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
 #x = 0
 x = 10
+yOffset = 30
 
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
@@ -103,21 +104,42 @@ while True:
 
     # Write text.
     y = top
+    
     draw.text((x, y), formatted_time, font=font, fill=textcolor)
-    y += font.getsize(formatted_time)[1]
+    y += yOffset
     draw.text((x, y), hostname, font=font, fill=textcolor)
-    y += font.getsize(hostname)[1]
+    y += yOffset
     draw.text((x, y), IP, font=font, fill=textcolor)
-    y += font.getsize(IP)[1]
+    y += yOffset
     draw.text((x, y), CPU, font=font, fill=textcolor)
-    y += font.getsize(CPU)[1]
+    y += yOffset
     draw.text((x, y), MemUsage, font=font, fill=textcolor)
-    y += font.getsize(MemUsage)[1]
+    y += yOffset
     draw.text((x, y), Disk, font=font, fill=textcolor)
-    y += font.getsize(Disk)[1]
+    y += yOffset
     draw.text((x, y), Temp, font=font, fill=textcolor)
-    y += font.getsize(Disk)[1]
+    y += yOffset
     draw.text((x, y), Version, font=font, fill=textcolor)
+
+    # DeprecationWarning: getsize is deprecated and will be removed in Pillow 10 (2023-07-01)
+    # https://github.com/tensorflow/models/issues/11040
+    # pip install Pillow==9.5.0
+    
+    # draw.text((x, y), formatted_time, font=font, fill=textcolor)
+    # y += font.getsize(formatted_time)[1]
+    # draw.text((x, y), hostname, font=font, fill=textcolor)
+    # y += font.getsize(hostname)[1]
+    # draw.text((x, y), IP, font=font, fill=textcolor)
+    # y += font.getsize(IP)[1]
+    # draw.text((x, y), CPU, font=font, fill=textcolor)
+    # y += font.getsize(CPU)[1]
+    # draw.text((x, y), MemUsage, font=font, fill=textcolor)
+    # y += font.getsize(MemUsage)[1]
+    # draw.text((x, y), Disk, font=font, fill=textcolor)
+    # y += font.getsize(Disk)[1]
+    # draw.text((x, y), Temp, font=font, fill=textcolor)
+    # y += font.getsize(Disk)[1]
+    # draw.text((x, y), Version, font=font, fill=textcolor)
 
     # Display image.
     disp.image(image, rotation)
