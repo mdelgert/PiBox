@@ -7,16 +7,27 @@ https://realpython.com/pyinstaller-python/
 https://mounirboulwafa.medium.com/creating-a-single-executable-file-exe-from-a-python-program-abda6a41f74f
 https://github.com/marketplace/actions/pyinstaller-windows
 https://github.com/JackMcKew/pyinstaller-action-windows-example/tree/master/src
+https://github.com/marketplace/actions/pyinstaller-linux
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+https://www.scaler.com/topics/how-to-create-requirements-txt-python/
+https://github.com/marketplace?type=actions&query=PyInstaller+
 
+# Setup
+sudo apt install python3 python3-pip python3-venv
+python3 -m pip install --user virtualenv
+python3 -m venv env
+source env/bin/activate
 pip3 install adafruit-circuitpython-rgb-display
 pip3 install --upgrade --force-reinstall spidev
 sudo apt-get install fonts-dejavu python3-pil python3-numpy
+pip3 freeze > requirements.txt
 
+# Enable spi
 sudo raspi-config
 interface options
 spi --> enable
 
-# Package
+# Packager
 pip install -U pyinstaller
 pyinstaller -F pibox.py
 
