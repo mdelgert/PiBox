@@ -7,4 +7,4 @@ pip3 freeze > requirements.txt
 pip install -U pyinstaller
 
 # Packager
-pyinstaller -F main.py
+pyinstaller -F test.py
