@@ -17,10 +17,9 @@ sudo apt install python3 python3-pip python3-venv
 python3 -m pip install --user virtualenv
 python3 -m venv env
 source env/bin/activate
-pip3 install adafruit-circuitpython-rgb-display
+pip3 install adafruit-circuitpython-rgb-display Pillow
 pip3 install --upgrade --force-reinstall spidev
 sudo apt-get install fonts-dejavu python3-pil python3-numpy
-pip install Pillow
 pip3 freeze > requirements.txt
 
 # Packager

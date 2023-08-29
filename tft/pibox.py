@@ -4,6 +4,9 @@
 
 # -*- coding: utf-8 -*-
 
+import RPi.GPIO as GPIO
+import time
+import datetime
 import socket
 import datetime
 import time
@@ -12,7 +15,6 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 from adafruit_rgb_display import st7789
-
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -86,7 +88,11 @@ while True:
     # https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load
 
     current_time = datetime.datetime.now().time()
-    formatted_time = "Time: " + current_time.strftime("%I:%M:%S %p")
+    #formatted_time = "Time: " + current_time.strftime("%I:%M:%S %p")
+    formatted_time = "Time: " + current_time.strftime("%I:%M:%p")
+
+    # uptime_seconds = get_system_uptime()
+    # uptime = "Uptime: " + format_uptime(uptime_seconds)
 
     hostname = "Host: " + socket.gethostname()
     cmd = "hostname -I | cut -d' ' -f1"
@@ -105,6 +111,9 @@ while True:
     # Write text.
     y = top
     
+    # draw.text((x, y), uptime, font=font, fill=textcolor)
+    # y += yOffset
+
     draw.text((x, y), formatted_time, font=font, fill=textcolor)
     y += yOffset
     draw.text((x, y), hostname, font=font, fill=textcolor)
@@ -143,4 +152,6 @@ while True:
 
     # Display image.
     disp.image(image, rotation)
-    time.sleep(0.1)
+    #time.sleep(0.1)
+    #time.sleep(0.25)
+    time.sleep(60)
