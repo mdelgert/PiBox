@@ -76,7 +76,7 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-Version = "Version: 1.1"
+Version = "Version: 1.2"
 
 print("Pibox " + Version)
 
