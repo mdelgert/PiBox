@@ -1,4 +1,5 @@
 # Raspberry Pi Hardware Based PWM Fan Control
+https://github.com/chapvic/bcm2835
 
 This is a fork of https://gist.github.com/alwynallan/1c13096c4cd675f38405702e89e0c536 for use with the KubeSail PiBox
 
