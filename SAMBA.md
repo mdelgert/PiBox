@@ -4,6 +4,14 @@ sudo cp -p /etc/samba/smb.conf /etc/samba/smb.conf.original
 sudo chmod -R 777 /mnt/ssd1
 sudo chmod -R 777 /mnt/ssd2
 
+# add the user
+sudo smbpasswd -a user
+
+# restart the service
+sudo systemctl restart smbd
+
+sudo nano /etc/samba/smb.conf
+
 [ssd1]
 path = /mnt/ssd1
 writeable = yes
