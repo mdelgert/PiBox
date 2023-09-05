@@ -27,3 +27,14 @@ browseable = yes
 create mask = 0777
 directory mask = 0777
 public = no
+
+### How to prevent Samba-server from auto-providing users /home-directory as a shared-folder?
+https://unix.stackexchange.com/questions/418195/samba-how-to-prevent-samba-server-from-auto-providing-users-home-directory-as
+
+[homes]
+comment = Home Directories
+available = no <---- add this line
+browseable = yes
+writable = yes
+valid users = %S
+valid users = MYDOMAIN\%S
