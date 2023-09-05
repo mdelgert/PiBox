@@ -20,3 +20,13 @@ sudo nano /etc/fstab
 sudo umount /mnt/ssd1
 sudo umount /mnt/ssd2
 sudo mount -a
+
+### Enable trim
+https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi
+sudo fstrim -v /
+sudo fstrim -v /mnt/ssd1
+sudo fstrim -v /mnt/ssd2
+sudo apt-get install -y sg3-utils lsscsi
+
+
+
