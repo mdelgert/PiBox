@@ -19,7 +19,7 @@ sudo nano /etc/fstab
 ### Mont by UID Add 
 sudo blkid
 sudo nano /etc/fstab
-UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX /dev/sda   /mnt/d1   ext4   defaults   0   2
+UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX /mnt/my_partition ext4 defaults 0 0
 
 ### Test the mount
 sudo umount /mnt/d1
