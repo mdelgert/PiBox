@@ -6,3 +6,4 @@ https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json
 
 ### Pi Hosted
 https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-arm64.json
+https://raw.githubusercontent.com/novaspirit/pi-hosted/master/template/portainer-v2-amd64.json
