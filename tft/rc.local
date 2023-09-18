@@ -17,7 +17,7 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-# Show system stats on Mini PiTFT
-pibox
+# Run pibox on start
+pibox &
 
 exit 0
