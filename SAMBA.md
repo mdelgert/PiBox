@@ -6,7 +6,6 @@ https://pimylifeup.com/raspberry-pi-samba/
 
 ### Samba Setup
 sudo apt-get install samba samba-common-bin
-
 sudo cp -p /etc/samba/smb.conf /etc/samba/smb.conf.original
 sudo chmod -R 777 /mnt/d1
 sudo chmod -R 777 /mnt/d2
