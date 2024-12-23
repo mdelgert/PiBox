@@ -1,0 +1,11 @@
+[Unit]
+Description=PiBox Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/pibox
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
