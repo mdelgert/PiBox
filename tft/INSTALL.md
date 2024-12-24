@@ -15,9 +15,9 @@ spi --> enable
 # Run pibox on start
 # pibox &df -h
 
-# Debian bookworm new setup
-sudo nano /etc/systemd/system/pibox.service (see pibox.service example provided)
+# Debian bookworm new setup (see pibox.service example provided)
+sudo nano /etc/systemd/system/pibox.service 
 sudo systemctl enable pibox.service
 sudo systemctl start pibox.service
-sudo systemctl stop pibox.service
+#sudo systemctl stop pibox.service
 

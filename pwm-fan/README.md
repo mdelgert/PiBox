@@ -11,16 +11,16 @@ cd bcm2835-1.68
 ./configure
 make
 sudo make install
-#cd ..
-#make
-#sudo make install
+cd ..
+make
+sudo make install
 ```
 
 To stress-test :
 
 ```bash
 sudo apt install -y git stress-ng
-stress-ng -c 4 -t 1m -q & watch -n1 cat /run/pi_fan_hwpwm.state
+stress-ng -c 4 -t 3m -q & watch -n1 cat /run/pi_fan_hwpwm.state
 ```
 
 And Ctrl+C when done.
