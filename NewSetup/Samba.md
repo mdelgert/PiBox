@@ -12,7 +12,7 @@ sudo smbpasswd -a mdelgert
 #or systemctl restart smb
 sudo systemctl start smbd 
 sudo systemctl enable smbd
-#enable windows network browser
+#enable windows clients network browser in GUI
 sudo systemctl start wsdd 
 sudo systemctl enable wsdd
 sudo wsdd --version
