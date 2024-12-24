@@ -1,0 +1,16 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=06cddfcd-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=06cddfcd-02  /               ext4    defaults,noatime  0       1
+UUID=7dadb049-3b3d-4fcf-ac0c-de1f60f90542 /mnt/d1 ext4 defaults,noatime,nofail 0 2
+UUID=aed28b67-eb8b-4a09-9e42-dedc2b64e2c6 /mnt/d2 ext4 defaults,noatime,nofail 0 2
+
+# Enable swap on SSD /mnt/d1
+/mnt/d1/swapfile none swap sw,pri=0,nofail 0 0
+
+### TODO Verify because if moving to SSD is this necessary??????????
+
+# Optional: Temporary files in RAM to reduce writes on eMMC
+tmpfs /var/tmp tmpfs defaults,noatime,nosuid,nodev,noexec,mode=0755,size=100M 0 0
+
+# Optional: Logs in RAM to reduce writes on eMMC
+tmpfs /var/log tmpfs defaults,noatime,nosuid,nodev,noexec,mode=0755,size=50M 0 0
