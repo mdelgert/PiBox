@@ -1,6 +1,7 @@
+See RecommendsFinal.md
+
 Optimize system for EMMC, RaspberryPI#
 We’ll make a few tweaks intended to optimize disk-usage on the EMMC disk, which is the slowest component in the PiBox. These are optional steps.
-
 
 # Store system logs in memory, instead of writing to disk, and lower log verbosity
 sudo sed -i "s/#Storage.*/Storage=volatile/" /etc/systemd/journald.conf
